@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CR1PT0N1C 
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <!-- Import knihovny Marked.js pro překlad Markdownu -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            background-color: #050505; color: #00ff00;
+            font-family: 'VT323', monospace; font-size: 1.5rem;
+            padding: 20px; max-width: 800px; margin: 0 auto;
+        }
+        body::before {
+            content: " "; display: block; position: fixed;
+            top: 0; left: 0; bottom: 0; right: 0;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%);
+            background-size: 100% 4px; z-index: 50; pointer-events: none;
+        }
+        a { color: #00ff00; text-decoration: none; border-bottom: 1px dashed #00ff00; }
+        a:hover { background-color: #00ff00; color: #050505; }
+        .nav-btn { display: inline-block; margin-bottom: 20px; border: none; }
+        .nav-btn::before { content: "[ "; } .nav-btn::after { content: " ]"; }
+        
+        /* Styly pro vykreslený článek */
+        #content h1 { margin-top: 20px; margin-bottom: 10px; color: #fff; text-transform: uppercase; }
+        #content h2 { margin-top: 15px; margin-bottom: 5px; color: #aaa; }
+        #content p { margin-bottom: 15px; line-height: 1.4; }
+        #content pre { background: #111; padding: 10px; border-left: 3px solid #00ff00; margin-bottom: 15px; overflow-x: auto; }
+        #content code { color: #ff003c; } /* Červená pro inline kód */
+        #content blockquote { border-left: 2px dashed #00ff00; padding-left: 10px; margin-bottom: 15px; color: #aaa; }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="nav-btn">cd .. (RETURN)</a>
+    <div id="content">
+        <p class="blinking-cursor">Loading decrypted payload... █</p>
+    </div>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const fileName = urlParams.get('file');
+        const contentDiv = document.getElementById('content');
+
+        if (fileName) {
+            fetch(`records/${fileName}`)
+                .then(response => {
+                    if (!response.ok) throw new Error("FILE_NOT_FOUND");
+                    return response.text();
+                })
+                .then(text => {
+                    contentDiv.innerHTML = marked.parse(text);
+                })
+                .catch(error => {
+                    contentDiv.innerHTML = `<h1 style="color:red">ERROR 404</h1><p>Payload [${fileName}] corrupted or missing.</p>`;
+                });
+        } else {
+            contentDiv.innerHTML = `<h1 style="color:red">ERROR</h1><p>No target file specified.</p>`;
+        }
+    </script>
+</body>
+</html>
