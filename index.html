@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CR1PT0N1C // TERMINAL</title>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <style>
+        /* Základní reset a barvy */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            background-color: #050505;
+            color: #00ff00;
+            font-family: 'VT323', monospace;
+            font-size: 1.5rem;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+
+        /* CRT Scanline Efekt (pro ten správný retro hacker vibe) */
+        body::before {
+            content: " ";
+            display: block;
+            position: fixed;
+            top: 0; left: 0; bottom: 0; right: 0;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%);
+            background-size: 100% 4px;
+            z-index: 50;
+            pointer-events: none;
+        }
+
+        /* Odkazy vypadají jako příkazy - hezká zelená tlačítka */
+        a {
+            color: #00ff00;
+            text-decoration: none;
+            display: inline-block;
+            margin-right: 15px;
+            padding: 5px;
+            transition: 0.2s;
+        }
+        a::before { content: "[ "; }
+        a::after { content: " ]"; }
+        a:hover {
+            background-color: #00ff00;
+            color: #050505;
+            cursor: pointer;
+        }
+
+        /* Styly pro layout */
+        #terminal { max-width: 800px; margin: 0 auto; }
+        .header { border-bottom: 2px dashed #00ff00; padding-bottom: 10px; margin-bottom: 20px; }
+        .blinking-cursor { animation: blink 1s step-end infinite; }
+        @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+        
+        .hidden { display: none; }
+        .glitch { color: #ff003c; }
+
+        /* Container pro výpis článků do sloupce */
+        .ls-output {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 5px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="terminal">
+        <div class="header">
+            <h1>CR1PT0N1C // BLOG</h1>
+            <p>STATUS: <span id="status">BOOTING_SYSTEM...</span></p>
+        </div>
+
+        <div id="output"></div>
+
+        <div id="main-menu" class="hidden">
+            <br>
+            <p>> AWAITING_COMMAND</p>
+            <nav style="margin-top: 10px; margin-bottom: 20px;">
+                <a href="https://github.com/cr1pt0n1c" target="_blank">WHOAMI (GITHUB)</a>
+            </nav>
+            
+            <p>> ls -la ./records</p>
+            <div class="ls-output">
+                <!-- Tady se budou proklikávat tvé články -->
+                <a href="post.html?file=01_hello_world.md">01_hello_world.md</a>
+                <a href="post.html?file=02_phishing_analysis.md">02_phishing_analysis.md</a>
+                <a href="post.html?file=03_osint_frameworks.md">03_osint_frameworks.md</a>
+            </div>
+            
+            <br>
+            <p>root@cr1pt0n1c:~# <span class="blinking-cursor">█</span></p>
+        </div>
+    </div>
+
+    <script>
+        // Bootovací sekvence pro efekt
+        const bootLines = [
+            "Establishing secure connection to CR1P_Node_01...",
+            "Bypassing firewalls... OK",
+            "Loading PhishGuard Sentinel modules... OK",
+            "Decrypting payload...",
+            "ACCESS GRANTED."
+        ];
+
+        const output = document.getElementById('output');
+        const mainMenu = document.getElementById('main-menu');
+        const status = document.getElementById('status');
+        let delay = 0;
+
+        bootLines.forEach((line, index) => {
+            setTimeout(() => {
+                output.innerHTML += `<p>> ${line}</p>`;
+                if (index === bootLines.length - 1) {
+                    setTimeout(() => {
+                        mainMenu.classList.remove('hidden');
+                        status.innerText = "ONLINE";
+                    }, 500);
+                }
+            }, delay);
+            delay += 600; // Rychlost psaní řádků (v ms)
+        });
+    </script>
+</body>
+</html>
