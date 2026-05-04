@@ -42,4 +42,6 @@ If we want people to stop playing Russian roulette with their digital lives, we 
 
 Show them the mechanics. Show them the breach. Show them the weapon.
 
+> **Teach them the truth before they have to learn it from a scammer. Because by the time a real hacker teaches them a lesson, the tuition fee will be everything they own.**
+
 `CR1PT0N1C // END OF TRANSMISSION`
