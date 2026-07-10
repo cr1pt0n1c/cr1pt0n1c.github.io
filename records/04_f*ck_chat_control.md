@@ -30,14 +30,14 @@ Mass surveillance doesn't catch the cartel bosses or the sophisticated predators
 
 ## The Analog Rebellion
 
-I am not saying we shouldn't protect children. We absolutely must. But the path to protecting them lies in education, targeted police work, OSINT, and actual human intelligence—not in the lazy, dystopian dragnet of mass surveillance. 
+I am not saying we shouldn't protect children. We absolutely must. But the path to protecting them lies in education, targeted police work, OSINT, and actual human intelligence, not in the lazy, dystopian dragnet of mass surveillance. 
 
 We are slowly manifesting the exact cyberpunk nightmares every movie and video game warned us about. A massive, invisible eye opening above our heads, pulling the strings of our digital lives. 
 
-So, what is the countermeasure? Move to Signal. Or better yet, go back to carrier pigeons and pneumatic tubes. Because if this passes, trust in digital communication is dead.
+So, what is the countermeasure? Move to Signal. Or better yet, go back to carrier pigeons and pneumatic tubes. Because if this legislation passes, the concept of digital trust is structurally dead.
 
-> **F*CK CHAT CONTROL. And F*CK the EU.** (And just for the record, the letter hiding behind those asterisks definitely isn't a 'U').
-> 
-> I hope the politicians wake up and we stop at the nightmare of version 1.0, but looking at their track record, I wouldn't bet on it. The world is going to hell, and we everyday plebs are just forced to sit back and watch the show.
+> **You cannot legislate mathematics, and you cannot patch a structural vulnerability that is mandated by law. Chat Control doesn't make Europe safer, it simply turns it into a transparent panopticon where the only people left with real privacy are the criminals who know how to build their own walls.**
+>
+> If we accept version 1.0 with a quiet shrug, we have already lost the war for version 2.0. The perimeter is breached. Act accordingly.
 
 `CR1PT0N1C // END OF TRANSMISSION`
