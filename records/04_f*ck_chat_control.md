@@ -8,7 +8,7 @@ Right now, the European Union is trying to install that agent in your digital li
 
 Proponents of Chat Control will tell you that the recent moves are just an "extension" of existing rules. They argue that because Chat Control 1.0 was already here, extending it isn't a big deal. That is the logic of a boiling frog. Just because we've tolerated a breach of fundamental rights in the past doesn't mean we should codify it as the new normal.
 
-Make no mistake: using the ultimate moral shield—"protecting the children"—to push through mass surveillance is the oldest trick in the authoritarian playbook. The StB (the Czechoslovak secret police) and every other totalitarian apparatus in history used the exact same rationale. They were always doing it "for the good of the people," "to catch the real villains," or "to protect the state." 
+Make no mistake: using the ultimate moral shield "protecting the children" to push through mass surveillance is the oldest trick in the authoritarian playbook. The StB (the Czechoslovak secret police) and every other totalitarian apparatus in history used the exact same rationale. They were always doing it "for the good of the people," "to catch the real villains," or "to protect the state." 
 
 But protecting the vulnerable should never require the preemptive wiretapping of an entire continent. 
 
