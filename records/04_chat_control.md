@@ -1,4 +1,4 @@
-# F*CK CHAT CONTROL: The Anatomy of a Surveillance Dystopia
+# The Transparent Panopticon: The Anatomy of a Surveillance Dystopia
 
 There is a tired, dangerous phrase that always surfaces when governments want to strip away our privacy: *"If you have nothing to hide, you have nothing to fear."* Let's break that down. If you are sitting in your living room reading a book, you are doing absolutely nothing illegal. But if a government agent walked through your front door, pulled up a chair, and stared at you 24/7 with a notepad, you would be terrified. Privacy is not about hiding crimes, it is about basic human dignity. 
 
